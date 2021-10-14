@@ -91,7 +91,6 @@ public static void main(String[] args) {
                                 System.out.println("Enter meaning to add");
                                 
                                 String newMeaning = scnr.nextLine();
-                                // FIX ME - ADD CODE TO UPDATE MEANING
                                 tree.findNode(root,input).value.meaning += ("\n       -") + newMeaning;
                             }
                         }

@@ -1,14 +1,3 @@
-/*
-Course: COP3530 RVC 1218
-1218 - Fall 2021
-
-Group 16
-James Holmes
-Carlos Aguayo
-
-*/
-
-
 package app;
 
 public class RPN {

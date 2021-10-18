@@ -6,18 +6,15 @@ methods.
 ********************************/
 
 package app;
-
 import java.util.ArrayList;
 
 public class WordList {
-
     String s;
     
     public WordList() { 
         s = " ";
     }
-    
-    // this was part of the assigment zip files  
+        
     public void insert(WordMeaningNode node, WordMeaning value) {
         if (value.getWord().compareTo(node.value.getWord()) < 0) { 
             if (node.left != null) { 
@@ -25,7 +22,6 @@ public class WordList {
             } 
             else { 
                 s += node.value.getWord() + "  "; 
-		//System.out.println(" Inserted [" + value.getWord() + "] to left of [" + node.value.getWord()  + "]");
 		node.left = new WordMeaningNode(value); 
             } 
 	} 
@@ -35,13 +31,11 @@ public class WordList {
             } 
             else {
                 s += node.value.getWord() + "  "; 
-		//System.out.println(" Inserted [" + value.getWord() + "] to right of [" + node.value.getWord() + "]");
 		node.right = new WordMeaningNode(value);
             }
 	}
     } // end insert
     
-    // code included in zip
     public void inOrder(WordMeaningNode node){ // Ascending order
         if (node != null) {
             inOrder(node.left);
@@ -52,11 +46,8 @@ public class WordList {
      
     public boolean contains(WordMeaningNode node, String key){
 	// used to simplify comparsion operations below
-        //int compare = key.compareTo(node.value.getWord());
-        
+               
         // if node is empty/null
-        // not really needed since we initialized the tree with
-        // hard coded values
         if (node == null ){
             return false;
         }
@@ -77,8 +68,7 @@ public class WordList {
     }     
      
     public WordMeaningNode deleteNode(WordMeaningNode node, String key){
-	
-        // String comparison for user entered key vs. node value
+	// String comparison for user entered key vs. node value
         int compare = key.compareTo(node.value.getWord());
         
         // node not found
@@ -138,11 +128,6 @@ public class WordList {
                 return findNode(node.right,key);
             }
         return node;
-    }
-    
-    // this was part of the assigment zip files
-    public String toString(){
-        return s;
     }
 } // end class
     

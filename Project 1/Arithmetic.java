@@ -60,7 +60,7 @@ public class Arithmetic implements Constants {
 String postFixExpression() {
 // converts the infix expression to postfix expression
 
-        // A string to contain the postfix expression â€“ 
+        // A string to contain the postfix expression  
         // the output from this conversion.
         String postFix = "";
         Scanner scnr = new Scanner(expression);
@@ -78,21 +78,21 @@ String postFixExpression() {
                 
                 else {
                     current = token.charAt(0);
-                    // If the symbol is â€˜(â€˜, push on to the stack,
+                    // If the symbol is '(', push on to the stack,
                     if (current == Constants.LEFT_NORMAL) {
                         stack.push(current);
                     } // end if (
                     
-                    // If the symbol is â€˜)â€™
+                    // If the symbol is ')'
                     else if (current == Constants.RIGHT_NORMAL) {
                         try {
                             Character topmost = (Character)stack.pop();
                             char top = Character.valueOf(topmost);
                             while (top != Constants.LEFT_NORMAL) {
                                 // Pop everything from the operator stack 
-                                // down to the first â€˜(â€˜. 
+                                // down to the first '('. 
                                 postFix = postFix + top + Constants.A_SPACE;
-                                // Do not write the item â€˜)â€™. Discard it.
+                                // Do not write the item ')'. Discard it.
                                 top = (Character)stack.pop();
                             } // end while (
                         } // end try

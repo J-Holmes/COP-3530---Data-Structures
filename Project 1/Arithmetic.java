@@ -29,12 +29,12 @@ public class Arithmetic implements Constants {
                 char c = expression.charAt(index);
                 
                 switch (c) {
-                    // If the character is a left parenthesis â€˜(â€˜, 
+                    // If the character is a left parenthesis '(', 
                     // push it on to the stack
                     case '(':
                         stack.push(c);
                         break;
-                    // if the character is a right parenthesis, â€˜)â€™, 
+                    // if the character is a right parenthesis, ')', 
                     // visit the stack and pop the top element from off the stack.
                     case ')':
                         stack.pop();
@@ -114,7 +114,7 @@ String postFixExpression() {
                             output string. This process is continues until 
                             one of two things happen: */
                             
-                            /*Either the first â€˜(â€˜ is encountered.
+                            /*Either the first '(' is encountered.
                             The operator on the stack has lower precedence 
                             than the one just scanned */
                             while (top != Constants.LEFT_NORMAL && higher) {
